@@ -7,8 +7,7 @@ $text-color: white;
 $vivid-color: #ff8000;
 
 #homepage {
-  padding: 100px;
-  padding-bottom: 10px;
+  padding: 50px 100px;
   font-family: Raleway;
   text-align: center;
   margin: auto;
@@ -20,8 +19,8 @@ $vivid-color: #ff8000;
 }
 
 #cta {
-  margin-top: 50px;
-  margin-bottom: 20px;
+  margin-top: 200px;
+  margin-bottom: 10px;
   text-align: center;
   justify-content: space-evenly;
   color: $text-color;
@@ -56,7 +55,7 @@ button {
   transition: 0.2s ease-in-out;
 
   &:hover{
-  margin-top: 20px;
+  color: #d7d7d7;
   }
 }
 
