@@ -1,0 +1,69 @@
+$font-size-small: 16px;
+$bg-layer1: #303030;
+$bg-layer2: #505050;
+$font-size-header: 32px;
+$text-color: white;
+$vivid-color: #ff8000;
+
+body {
+  background-color: #202020;
+}
+
+#homepage {
+  padding: 100px;
+  padding-bottom: 10px;
+  font-family: Raleway;
+  text-align: center;
+  margin: auto;
+  margin-top: 10vh;
+  width: 600px;
+  background-color: $bg-layer1;
+  color: $text-color;
+  border-radius: 20px;
+}
+
+#cta {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+  justify-content: space-evenly;
+  color: $text-color;
+}
+
+button {
+  background-color: $vivid-color;
+  color: $text-color;
+  margin: 15px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: $font-size-small;
+  width: 200px;
+  height: 50px;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #bb5e00;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+  }
+}
+
+.signup {
+  text-decoration: none;
+  color: $text-color;
+  font-size: $font-size-small;
+}
+
+a{
+  text-decoration: none;
+  color: $vivid-color;
+}
+
+footer{
+  margin-top: 100px;
+  margin-bottom: 0;
+}
