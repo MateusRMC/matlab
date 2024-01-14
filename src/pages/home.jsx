@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import "./home.scss";
 import { Outlet, Link } from 'react-router-dom';
 
-export class home extends Component {
+export class Home extends Component {
   static propTypes = {}
 
   render() {
@@ -26,4 +26,4 @@ export class home extends Component {
   }
 }
 
-export default home
+export default Home
