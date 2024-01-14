@@ -1,14 +1,16 @@
-import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import { useState } from 'react'
 
-export class login extends Component {
-  static propTypes = {}
+function Login() {
 
-  render() {
+  const [estado, setEstado] = useState("bom dia");
+
     return (
-      <div>login</div>
+      <div>
+      <div>SAUDADAÇÃO DO DIA É : {estado}</div>
+      <button onClick={()=>setEstado("boa noite")}>CLICA PRA MUDAR</button>
+      </div>
     )
-  }
 }
 
-export default login
+export default Login
