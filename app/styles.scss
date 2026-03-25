@@ -14,3 +14,32 @@ body {
   text-align: center;
   margin: auto;
 }
+
+.repo-links {
+  width: 40%;
+  padding: 30px;
+  margin: 20px auto;
+  align-items: center;
+  text-align: center;
+}
+
+ul {
+  text-align: center;
+}
+
+.repo-links li {
+  margin: 20px;
+  padding: 20px 40px;
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  width: 100%;
+  background-color: #202020;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #808080;
+  color: white;
+  padding: 20px 40px;
+}
