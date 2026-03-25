@@ -1,15 +1,20 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Homepage() {
   const [reponames, setReponames] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   async function getRepoNames() {
     const req = await fetch("/api");
     const res = await req.json();
 
-    setReponames(res);
+    const cleanRepos = res.filter((i) => i.name !== "matlab"); //só tirando o matlab da resposta pra não gerar recursão de links
+
+    setReponames(cleanRepos);
+    setLoading(false);
   }
 
   useEffect(() => {
@@ -19,17 +24,20 @@ export default function Homepage() {
   return (
     <div className="main">
       <h1>Welcome to Matlab</h1>
-      <h2>Find a project you want to try</h2>
+      <h3>Projects</h3>
       <div className="repo-links">
-        <ul>
-          {reponames.map((repo) => (
-            <li key={repo.name}>
-              <a href={`https://${repo.name}-heymateus.vercel.app`}>
-                {repo.name}
-              </a>
-            </li>
-          ))}
-        </ul>
+        {loading ? (
+          <p className="loading">Loading Repos...</p>
+        ) : (
+          reponames.map((repo) => (
+            <Link
+              key={repo.name}
+              href={`https://${repo.name}-heymateus.vercel.app`}
+            >
+              {repo.name}
+            </Link>
+          ))
+        )}
       </div>
     </div>
   );
