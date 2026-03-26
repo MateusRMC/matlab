@@ -24,7 +24,7 @@ export default function Homepage() {
   return (
     <div className="main">
       <h1>Welcome to Matlab</h1>
-      <h3>Projects</h3>
+      <h3>Take a look into my projects below</h3>
       <div className="repo-links">
         {loading ? (
           <p className="loading">Loading Repos...</p>
